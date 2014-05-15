@@ -1,0 +1,777 @@
+/*!
+ * Roots 6.5.2
+ */
+
+$bootstrap-sass-asset-helper: false;
+@import "bootstrap/bootstrap";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+   background: #0a0a0a;
+   font-family: 'Exo 2', sans-serif;
+   font-weight: 300;
+   color: white;
+}
+
+h1 {
+   font-size: 2.2em;
+   font-weight: 400;
+   i {
+      color: #82bae9;
+      margin-left: 5px;
+   }
+}
+
+h2 {
+   color: #f5e100;
+   font-size: 1.8em;
+   margin-top: 10px;
+}
+
+h3 {
+   color: #f5e100;
+   font-size: 1.3em;
+   margin-top: 10px;
+   font-weight: 200;
+}
+
+a {
+   color: #f5e100;
+   &:hover {
+      text-decoration: none;
+   }
+}
+
+p {
+   line-height: 1.7em;
+   font-size: 1.15em;
+   font-weight: 200;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+   position: relative;
+   .container {
+      position: relative;
+      z-index: 9;
+   }
+   .row {
+      position: relative;
+      background: #3f484f;
+      background: rgba( 63, 72, 79, .89 );
+      .col-lg-12 {
+         padding: 0;
+      }
+   }
+}
+
+a.brand {
+   float: left;
+   display: block;
+   margin: 8px 0;
+   padding-left: 15px;
+}
+
+.nav-main {
+   float: right;
+   ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+         float: left;
+         overflow: hidden;
+         a, span {
+            font-size: 1.5em;
+            display: block;
+            padding: 66px 40px 10px;
+            color: white;
+            &:hover {
+               text-decoration: none;
+            }
+         }
+         .fa-caret-down {
+            position: absolute;
+            left: 50%;
+            bottom: -28px;
+            font-size: 46px;
+            margin: 0 -13px;
+            z-index: 9;
+        }
+         &.ride {
+            @include gradient-vertical( #4092d8, #3880bd );
+            > a {
+               background: url('../img/nav_sprite.png') 30px 10px no-repeat;
+            }
+            .fa-caret-down, ul li a {
+               color: #3880bd;
+            }
+         }
+         &.walk {
+            @include gradient-vertical( #4da733, #43922d );
+            > a {
+               background: url('../img/nav_sprite.png') -90px 10px no-repeat;
+            }
+            .fa-caret-down, ul li a {
+               color: #43922d;
+            }
+         }
+         &.maps {
+            @include gradient-vertical( #efa300, #d18f00 );
+            > a {
+               background: url('../img/nav_sprite.png') -220px 10px no-repeat;
+            }
+            .fa-caret-down, ul li a {
+               color: #d18f00;
+            }
+         }
+         &.connect {
+            @include gradient-vertical( #9e1be9, #8a18cc );
+            > a {
+               background: url('../img/nav_sprite.png') -354px 10px no-repeat;
+               padding: 66px 30px 10px;
+            }
+            .fa-caret-down, ul li a {
+               color: #8a18cc;
+            }
+         }
+         &.social {
+            position: relative;
+            .icons {
+               position: absolute;
+               top: 0;
+               left: 0;
+               padding: 11px 0 0 20px;
+               a {
+                  display: inline;
+                  font-size: 3em;
+                  padding: 0px 3px;
+                  i {
+                     &.fa-twitter {
+                        color: #5db5ff;
+                     }
+                     &.fa-facebook {
+                        color: #2093ff;
+                     }
+                  }
+               }
+            }
+            span {
+               font-size: 1em;
+               padding: 74px 40px 0px;
+            }
+         }
+         ul.sub-menu {
+            position: absolute;
+            background: white;
+            background: rgba( 255, 255, 255, .88 );
+            padding: 25px 0 5px;
+            min-width: 230px;
+            li {
+               float: none;
+               a {
+                  display: block;
+                  padding: 5px 10px;
+                  font-size: 1.2em;
+                  &:hover {
+                     background: #9c9c9b;
+                     color: white;
+                  }
+               }
+            }
+         }
+         &:hover {
+            overflow: visible;
+         }
+      }
+   }
+}
+
+/* ==========================================================================
+   Home Content
+   ========================================================================== */
+
+.home.page {
+   .banner {
+      height: 32em;
+   }
+}
+
+.hero_wrap {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   ul {
+      height: 32em;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      border-bottom: 3px solid #feed01;
+      z-index: 0;
+      li {
+         display: block;
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 32em;
+         width: 100%;
+      }
+   }
+   .hero_pager {
+      position: absolute;
+      bottom: 70px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      a {
+         width: 12px;
+         height: 12px;
+         border-radius: 6px;
+         background: #4e565c;
+         display: inline-block;
+         text-indent: -9999px;
+         border: 1px solid white;
+         margin: 0 3px;
+         &.activeSlide {
+            background: white;
+            border: 1px solid #4e565c;
+         }
+      }
+   }
+}
+
+.cta-bar {
+   background: #3f484f;
+   margin-top: -1.4em;
+   font-size: 1.9em;
+   line-height: 2.7em;
+   padding: 0 0 0 30px;
+   font-weight: 100;
+   z-index: 9;
+}
+
+.home_row {
+   &.miles {
+      position: relative;
+      background: #0f0f0f url('../img/bg_dots.png') center no-repeat;
+      margin: 40px 0 0;
+      padding: 15px 0 40px;
+      min-height: 360px;
+      span {
+         display: block;
+      }
+      .counts {
+         color: #82bae9;
+         font-size: 2.4em;
+         font-weight: 200;
+         line-height: 1.4em;
+         text-align: right;
+         margin: 0 50px 0 0;
+         display: inline-block;
+         min-width: 170px;
+      }
+      .desc {
+         position: relative;
+         font-size: 1.2em;
+         font-weight: 100;
+         line-height: 2.8em;
+         margin: 0;
+         display: inline-block;
+      }
+   }
+   &.updates {
+      background: url('../img/bg_textured.jpg') repeat;
+      padding: 50px 0;
+      h1 {
+         margin: 0 0 1em;
+      }
+      h2 {
+         margin-bottom: 1em;
+      }
+      h3 {
+         margin: 5px 0 2em;
+      }
+      .wp-post-image {
+         margin: 0 25px 25px 0;
+         max-width: 227px;
+         border: 2px solid white;
+         border-radius: 2px;
+      }
+      time {
+         color: #9d9d9d;
+      }
+      .left {
+         padding-right: 35px;
+         border-right: 1px solid #404040;
+      }
+      .right {
+         padding-left: 35px;
+         border-left: 1px solid #404040;
+         margin: 0 1px 0 -1px;
+         time {
+            font-size: 1.35em;
+            font-weight: 400;
+         }
+      }
+   }
+}
+
+.icon {
+   position: absolute;
+   width: 120px;
+   height: 120px;
+   background: url('../img/icon_sprite.png') no-repeat;
+   &.bike {
+      background-position: right -260px;
+      top: 160px;
+      left: 15px;
+      width: 330px;
+      line-height: 8em;
+      font-size: 1.2em;
+      font-weight: 200;
+   }
+   &.map {
+      background-position: 5px 10px;
+      top: 40px;
+      left: 600px;
+   }
+   &.signs {
+      background-position: 0 -125px;
+      top: 155px;
+      left: 420px;
+   }
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+   .alertbar {
+      padding: 1.5em 0 2em;
+      h1 {
+         font-size: 1.8em;
+      }
+      p {
+         font-size: 1.4em;
+      }
+      .btn {
+         margin: 57px 30px 0 0;
+      }
+      .right {
+         text-align: right;
+      }
+   }
+
+   .footer-sitemap {
+      margin: 0 0 40px;
+      .col-five {
+         border-top: 1px solid #3b3b3b;
+         float: left;
+         width: 20%;
+         padding: 40px 20px 0 0;
+         > p {
+            font-weight: 400;
+         }
+         ul {
+            padding: 0;
+            margin: 20px 0 0;
+            list-style-type: none;
+            li {
+               margin: 10px 0;
+            }
+         }
+      }      
+   }
+
+}
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+/* ==========================================================================
+   BootStrap overrides and extending
+   ========================================================================== */
+
+.btn-xl, .btn-group-xl>.btn {
+   padding: 0 46px;
+   font-size: .9em;
+   line-height: 3em;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+   padding: 10px 38px;
+}
+
+.btn-primary {
+   background: #f6de06;
+   border: none;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.0);
+   border-radius: 0;
+}
+
+.btn-default {
+   background: #6c6c6c;
+   color: #fded01;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.0);
+   border: none;
+   border-radius: 2px;
+   padding: 7px 28px;
+   font-size: 1.3em;
+   margin-bottom: 15px;
+}
+
+.small {
+   line-height: 1.3em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 500px) {
+   .home_row.miles .counts, .home_row.miles .desc {
+      display: block;
+      text-align: center;
+      margin: 10px 0 0;
+   }
+   .home_row.miles .desc {
+      margin: 0 0 10px;
+      line-height: 1.2em;
+   }
+}
+
+@media (max-width: $screen-xs-max) {
+   .content-info .footer-sitemap .col-five {
+      float: none;
+      width: auto;
+      border: none;
+      padding-top: 10px;
+      &:first-child {
+         border-top: 1px solid #3b3b3b;
+      }
+   }
+
+   .home.page {
+      .banner {
+         height: auto;
+      }
+   }
+
+   h1 {
+      text-align: center;
+   }
+
+   a.brand {
+      float: none;
+      text-align: center;
+      padding: 0;
+      img {
+         max-width: 90%;
+      }
+   }
+
+   .hero_wrap {
+      display: none;
+   }
+
+   .home_row.miles {
+      margin: 20px 0 0;
+   }
+
+   .icon.map, .icon.signs {
+      display: none;
+   }
+
+   .icon.bike {
+      position: relative;
+      top: auto;
+      left: auto;
+      background-position: center -260px;
+      line-height: 16em;
+      width: 195px;
+      margin: 0 auto 40px;
+   }
+
+   .home_row.updates .right, .home_row.updates .left {
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   .home_row.updates .left {
+      margin-bottom: 40px;
+      .wp-post-image {
+         display: block;
+         margin: 0 auto 25px;
+         float: none !important;
+      }
+   }
+
+   .content-info .alertbar .right {
+      text-align: center;
+      .btn {
+         margin: 15px 0 0 0;
+      }
+   }
+
+   .nav-main {
+      float: none;
+      ul li {
+         display: block;
+         float: none;
+         a, span {
+            padding: 10px 20px;
+         }
+         &.ride, &.walk, &.maps, &.connect {
+            >a {
+               padding: 10px 20px;
+               background: none;
+            }
+            .fa-caret-down {
+               color: white;
+            }
+         }
+         &.social {
+            display: none;
+         }
+         .fa-caret-down {
+            bottom: auto;
+            top: 0px;
+            right: 13px;
+            font-size: 20px;
+            padding: 14px 30px 15px;
+            left: auto;
+         }
+         &.open ul.sub-menu {
+            display: block;
+         }
+         ul.sub-menu {
+            display: none;
+            position: relative;
+            width: 100%;
+            padding: 10px 0 5px;
+            li a {
+               padding: 5px 25px;
+            }
+         }
+      }
+   }
+
+}
+
+@media (max-width: $screen-sm-max) {
+
+   h1 {
+      font-size: 1.8em;
+   }
+   h2 {
+      font-size: 1.5em;
+   }
+   p {
+      font-size: 1em;
+   }
+
+   .cta-bar {
+      font-size: 1.6em;
+   }
+
+   .content-info .alertbar p {
+      font-size: 1.2em;
+   }
+
+   a.brand img {
+      margin-top: 5px;
+   }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+   a.brand img {
+      max-width: 300px;
+   }
+
+   .nav-main {
+      ul li {
+         &.connect, &.social, &.walk, &.ride, &.maps {
+            >a, span {
+               padding: 50px 19px 5px;
+               background-size: auto 35px;
+               font-size: 1.2em;
+            }
+         }
+         &.ride >a {
+            background-position: 15px 10px;
+         }
+         &.walk >a {
+            background-position: -65px 10px;
+         }
+         &.maps >a {
+            background-position: -155px 10px;
+         }
+         &.connect >a {
+            background-position: -235px 10px;
+         }
+         &.social {
+            .icons {
+               padding: 11px 0 0 15px;
+               a {
+                  font-size: 2em;
+               }
+            }
+         }
+         ul.sub-menu {
+            width: 194px;
+            min-width: inherit;
+            li a {
+               font-size: 1em;
+            }
+         }
+      }
+   }
+
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+
+   .icon {
+      background-size: 90px;
+      height: 100px;
+      width: 100px;
+      &.bike {
+         left: 435px;
+         top: 260px;
+         line-height: 6em;
+         background-position: right -195px;
+         width: 300px;
+      }
+      &.map {
+         top: 50px;
+         left: 550px;
+      }
+      &.signs {
+         bottom: 50px;
+         left: 410px;
+         background-position: 0 -94px;
+      }
+   }
+
+   .home_row.updates .left, .home_row.updates .right {
+      border: none;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   .home_row.updates .left {
+      margin-bottom: 40px;
+   }
+
+   .updates .event-row {
+      float: left;
+      width: 33.3%;
+   }
+
+}
+
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+   .icon {
+      &.bike {
+         left: 15px;
+         top: 160px;
+      }
+   }
+
+   .nav-main ul li {
+      a, span {
+         padding: 61px 30px 5px;
+      }
+      &.ride >a {
+         background-position: 20px 10px;
+      }
+      &.walk >a {
+         background-position: -100px 10px;
+      }
+      &.maps >a {
+         background-position: -230px 10px;
+      }
+      &.connect >a {
+         background-position: -364px 10px;
+         padding: 61px 20px 5px;
+      }
+      &.social {
+         .icons {
+            padding: 11px 0 0 10px;
+            a {
+               padding-left: 0;
+            }
+         }
+         span {
+            padding: 69px 30px 0px;
+         }
+      }
+   }
+
+   .brand img {
+      max-width: 370px;
+      margin-top: 5px;
+   }
+
+}
+
+@media (min-width: $screen-lg-min) { }
