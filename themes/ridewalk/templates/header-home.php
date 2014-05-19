@@ -1,6 +1,6 @@
 <header class="banner" role="banner">
   <div class="container">
-    <div class="row">
+    <div class="row navwrap">
       <div class="col-lg-12">
         <a class="brand" href="<?php echo home_url('/') ?>"><img src="<?php echo get_bloginfo('template_directory');?>/assets/img/ride_walk_logo.png" alt="<?php bloginfo('name'); ?>" /></a>
         <nav class="nav-main" role="navigation">

@@ -31,7 +31,10 @@ var Roots = {
       // JavaScript to be fired on the home page
       $('.hero_images').cycle({
         pager       : '.hero_pager',
-        slideResize : false
+        slideResize : false,
+        fx          : 'scrollLeft',
+        speed       : 500,
+        timeout     : 4000
       });
     }
   },

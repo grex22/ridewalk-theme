@@ -5,7 +5,13 @@
 		 
 		    while ( have_rows('hero_images') ) : the_row();
 		        ?>
-		        <li style="background-image:url('<?php the_sub_field('image'); ?>');"></li>
+		        <li style="background-image:url('<?php the_sub_field('image'); ?>');">
+		        	<div class="container">
+		        		<div class="row">
+							<div class="cta-bar col-lg-offset-1 col-lg-10"><span><?php the_sub_field('text'); ?></span><a href="<?php the_sub_field('url'); ?>" role="button" class="pull-right btn btn-xl btn-primary"><?php the_sub_field('btn_text'); ?></a></div>
+						</div>
+					</div>
+				</li>
 		        <?php
 		    endwhile;
 		 
@@ -13,11 +19,6 @@
 	?>
 	</ul>
 	<div class="hero_pager"></div>
-	<div class="container">
-		<div class="row">
-			<div class="cta-bar col-lg-offset-2 col-lg-8"><span>Making a better place to live, work, and play.</span><button type="button" class="pull-right btn btn-xl btn-primary">Area Maps</button></div>
-		</div>
-	</div>
 </div>
 
 <div class="home_row miles">
@@ -97,32 +98,33 @@
 
 	  		</div>
 	  		<div class="col-lg-4 right">
-	  			<h1>Upcoming Events <i class="fa fa-calendar"></i></h1>
-	  			<?php
-	  				$upcommin_events_args = array(
-						'posts_per_page'	=> 3,
-						'post_type'			=> 'post',
-						'post_status'		=> 'publish',
-						'cat'				=> 3
-					);
-					
-					$upcommin_events = new WP_Query( $upcommin_events_args );
+	  			<div class="upcoming-events-widget">
+		  			<h1>Upcoming Events <i class="fa fa-calendar"></i></h1>
+		  			<?php
+		  				$upcommin_events_args = array(
+							'posts_per_page'	=> 3,
+							'post_type'			=> 'post',
+							'post_status'		=> 'publish',
+							'cat'				=> 3
+						);
+						
+						$upcommin_events = new WP_Query( $upcommin_events_args );
 
-					while ( $upcommin_events->have_posts() ) : $upcommin_events->the_post();
+						while ( $upcommin_events->have_posts() ) : $upcommin_events->the_post();
 
-						?>
-						<div class="event-row">
-							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'F j, Y' ); ?></time>
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						</div>
-						<?php
+							?>
+							<div class="event-row">
+								<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'F j, Y' ); ?></time>
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							</div>
+							<?php
 
-					endwhile;
+						endwhile;
 
-					wp_reset_postdata();
-				?>
-				<a href="#" role="button" class="btn btn-default">Full Calendar</a>
-
+						wp_reset_postdata();
+					?>
+					<a href="#" role="button" class="btn btn-default">Full Calendar</a>
+				</div>
 	  		</div>
 	  	</div>
 	</div>
