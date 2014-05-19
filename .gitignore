@@ -3,3 +3,5 @@
 node_modules
 .sass-cache
 assets/css/main.min.css.map
+
+/plugins/wp-nav-plus/
