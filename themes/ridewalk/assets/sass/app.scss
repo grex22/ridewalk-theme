@@ -44,6 +44,7 @@ a {
    color: #f5e100;
    &:hover {
       text-decoration: none;
+      color: #FFF7BA;
    }
 }
 
@@ -859,6 +860,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          line-height: 6em;
          background-position: right -195px;
          width: 300px;
+         z-index: 9;
       }
       &.map {
          top: 50px;

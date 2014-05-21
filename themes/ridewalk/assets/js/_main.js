@@ -34,7 +34,7 @@ var Roots = {
         slideResize : false,
         fx          : 'scrollLeft',
         speed       : 500,
-        timeout     : 4000
+        timeout     : 6000
       });
     }
   },
