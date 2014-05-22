@@ -49,9 +49,8 @@ a {
 }
 
 p {
-   line-height: 1.7em;
-   font-size: 1.15em;
-   font-weight: 200;
+   line-height: 1.5em;
+   margin-bottom: 30px;
 }
 
 
@@ -547,6 +546,11 @@ a.brand {
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+.aligncenter { display: block; margin: 20px auto; }
+.alignleft { float: left; margin: 0 20px 20px 0; }
+.alignright { float: right; margin: 0 0px 20px 20px; }
 
 
 /* ==========================================================================

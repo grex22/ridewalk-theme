@@ -8,3 +8,9 @@ function ride_walk_scripts() {
 	wp_enqueue_style( 'google-font-neo2', '//fonts.googleapis.com/css?family=Exo+2:400,300,200,100', array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'ride_walk_scripts' );
+
+function rw_add_image_class($class){
+   $class .= ' img-thumbnail';
+   return $class;
+}
+add_filter('get_image_tag_class','rw_add_image_class');
