@@ -5367,7 +5367,7 @@ a.brand {
   color: #f5e100; }
 
 .gform_wrapper div.validation_error {
-  color: #990000;
+  color: #FFB3B3;
   background: rgba(255, 255, 255, 0.3);
   padding: 6px 10px; }
 
@@ -5419,12 +5419,12 @@ a.brand {
     .sidebar .cta-widget h3 {
       margin: 20px 0px 0 100px;
       letter-spacing: .7px;
-      font-weight: 100;
+      font-weight: 300;
       line-height: 1.3em; }
     .sidebar .cta-widget p {
       margin: 0 0 0 100px;
       letter-spacing: .3px;
-      font-weight: 100; }
+      font-weight: 300; }
     .sidebar .cta-widget.trails {
       margin-bottom: 4em; }
       .sidebar .cta-widget.trails h3 {
