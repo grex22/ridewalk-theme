@@ -18,7 +18,7 @@ body {
 
 h1 {
    font-size: 2.2em;
-   font-weight: 200;
+   font-weight: 300;
    i {
       color: #82bae9;
       margin-left: 5px;
@@ -30,14 +30,14 @@ h2 {
    font-size: 1.8em;
    margin-top: 10px;
    margin-bottom: 1em;
-   font-weight: 200;   
+   font-weight: 300;   
 }
 
 h3 {
    color: #f5e100;
    font-size: 1.3em;
-   margin: 5px 0 2em;
-   font-weight: 200;
+   margin: 5px 0 1.2em;
+   font-weight: 300;
 }
 
 a {
@@ -394,6 +394,34 @@ a.brand {
 .main-content {
    background: url("../img/bg_textured.jpg") repeat;
    padding: 4em 0 10em;
+   
+   &.reversed{
+    background-image:none;
+    background-color:white;
+    color:black;
+    
+    h1,h2,h3,h4,h5,h6{
+      color:#DD8B0F;
+    }
+    
+    a{
+      color:#4092d8;
+      &:hover{darken(#4092d8,10);}
+    }
+    
+    label, label.gfield_label{
+      color:black;
+    }
+    
+    .cta-widget{
+      color:white;
+      h1,h2,h3,h4,h5,h6{
+        a{
+          color: #f5e100;
+        }
+      }
+    }
+   }
 }
 
 .breadcrumbs {
@@ -548,9 +576,9 @@ a.brand {
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
-.aligncenter { display: block; margin: 20px auto; }
-.alignleft { float: left; margin: 0 20px 20px 0; }
-.alignright { float: right; margin: 0 0px 20px 20px; }
+.aligncenter { display: block; margin: 30px auto; }
+.alignleft { float: left; margin: 0 30px 30px 0; }
+.alignright { float: right; margin: 0 0px 30px 30px; }
 
 
 /* ==========================================================================
