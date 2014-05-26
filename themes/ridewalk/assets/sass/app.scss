@@ -406,7 +406,9 @@ a.brand {
     
     a{
       color:#4092d8;
-      &:hover{darken(#4092d8,10);}
+      &:hover{
+        color: darken(#4092d8,10);
+      }
     }
     
     label, label.gfield_label{
