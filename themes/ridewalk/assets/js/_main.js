@@ -41,20 +41,23 @@ var Roots = {
   },
   maps: {
     init: function() {
-      alert('f');
+
       var historicalOverlay;
 
       function initialize() {
 
-        var newark = new google.maps.LatLng(40.740, -74.18);
+        var warsaw = new google.maps.LatLng(41.253306, -85.852012);
         var imageBounds = new google.maps.LatLngBounds(
-            new google.maps.LatLng(40.712216, -74.22655),
-            new google.maps.LatLng(40.773941, -74.12544));
+        
+            new google.maps.LatLng(41.435793, -86.092338),
+            new google.maps.LatLng(41.047527, -85.650138));
 
         var mapOptions = {
           zoom: 13,
-          center: newark
+          center: warsaw
         };
+        
+        $('#map-canvas').css('height',400);
 
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
