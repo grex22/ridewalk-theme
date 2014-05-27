@@ -390,10 +390,26 @@ a.brand {
 /* ==========================================================================
    Content
    ========================================================================== */
-
+#reverser{
+  position: absolute;
+  background: white;
+  color: black;
+  padding: 8px;
+  border-radius: 0 0 3px 3px;
+  border: solid #FFF7BA;
+  border-width: 0px 3px 3px 3px;
+  top: 0;
+  left: 10px;
+  
+  &.reversed{
+    color:white;
+    background:black;
+  }
+}
 .main-content {
    background: url("../img/bg_textured.jpg") repeat;
    padding: 4em 0 10em;
+   position:relative;
    
    &.reversed{
     background-image:none;
