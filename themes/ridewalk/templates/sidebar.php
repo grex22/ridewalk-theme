@@ -1,4 +1,3 @@
-<?php dynamic_sidebar('sidebar-primary'); ?>
 
 <div class="cta-widget ride">
 	<a href="#" class="icon bike"></a>
@@ -7,10 +6,12 @@
 </div>
 
 <div class="cta-widget trails">
-	<a href="#" class="icon bike"></a>
-	<h3><a href="#">Trouble on the Trails?</a></h3>
-	<p>Report a Problem!</p>
+	<a href="<?php echo get_permalink(92); ?>" class="icon bike"></a>
+	<h3><a href="<?php echo get_permalink(92); ?>">Trouble on the Trails?</a></h3>
+	<p><a href="<?php echo get_permalink(92); ?>">Report a Problem!</a></p>
 </div>
+
+<?php dynamic_sidebar('sidebar-primary'); ?>
 
 <div class="upcoming-events-widget">
 	<h1>Upcoming Events <i class="fa fa-calendar"></i></h1>

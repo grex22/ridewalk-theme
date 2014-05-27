@@ -349,6 +349,31 @@ a.brand {
    }
 }
 
+
+.widget_em_widget{
+  margin-bottom:40px;
+  ul{
+    list-style:none;
+  }
+  &>ul>li{
+    margin-bottom:10px;
+    a{
+      font-size:17px;
+      font-weight:300;
+    }
+  }
+
+  h2{
+    &:after{
+      content:"\f073";
+      font-family:"FontAwesome";
+      color: #82bae9;
+      
+    }
+  }
+  
+}
+
 .upcoming-events-widget {
    h1 {
       margin: 0 0 1em;
