@@ -357,12 +357,14 @@ a.brand {
     padding-left:9px;
   }
   &>ul>li{
-    margin-bottom:10px;
-    padding-bottom:10px;
+    margin-top:10px;
+    padding-top:10px;
     a{
       font-size:17px;
       font-weight:300;
     }
+    
+    &:first-child{margin-top:0;padding-top:0;}
     
     &+li{
       border-top:1px dotted #888;
