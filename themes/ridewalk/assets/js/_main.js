@@ -23,6 +23,11 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $("#reverser").click(function(e){
+        e.preventDefault();
+        $(".main-content").toggleClass('reversed');
+        $(this).toggleClass('reversed');
+      });
     }
   },
   // Home page
