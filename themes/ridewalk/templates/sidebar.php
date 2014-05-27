@@ -13,6 +13,7 @@
 
 <?php dynamic_sidebar('sidebar-primary'); ?>
 
+<!--
 <div class="upcoming-events-widget">
 	<h1>Upcoming Events <i class="fa fa-calendar"></i></h1>
 	<?php
@@ -40,3 +41,4 @@
 	?>
 	<a href="#" role="button" class="btn btn-default">Full Calendar</a>
 </div>
+-->
