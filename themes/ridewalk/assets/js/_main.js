@@ -22,11 +22,19 @@ var Roots = {
   // All pages
   common: {
     init: function() {
+      if($.cookie('is_reversed') === 'true'){
+        $('.main-content').addClass('reversed');
+      }
       // JavaScript to be fired on all pages
       $("#reverser").click(function(e){
         e.preventDefault();
         $(".main-content").toggleClass('reversed');
         $(this).toggleClass('reversed');
+        if($(this).hasClass('reversed')){
+          $.cookie('is_reversed','true',{expires: 7, path:'/'});
+        }else{
+          $.cookie('is_reversed','false',{expires: 7, path:'/'});
+        }
       });
     }
   },
