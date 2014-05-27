@@ -394,12 +394,12 @@ a.brand {
   position: absolute;
   background: white;
   color: black;
-  padding: 8px;
+  padding: 7px 8px;
   border-radius: 0 0 3px 3px;
   border: solid #FFF7BA;
   border-width: 0px 3px 3px 3px;
   top: 0;
-  left: 10px;
+  right: 10px;
   
   &.reversed{
     color:white;
@@ -843,7 +843,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
 
    .main-content {
-      padding: 2em 0;
+      padding: 2.7em 0;
    }
    .main {
       padding-right: 15px;
@@ -893,6 +893,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
    .banner .overlay {
       min-height: 12.3em;
+   }
+   
+   .main{
+    border-right:none;
    }
 
 }
