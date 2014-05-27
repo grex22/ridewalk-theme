@@ -24,6 +24,7 @@ var Roots = {
     init: function() {
       if($.cookie('is_reversed') === 'true'){
         $('.main-content').addClass('reversed');
+        $('#reverser').addClass('reversed');
       }
       // JavaScript to be fired on all pages
       $("#reverser").click(function(e){
