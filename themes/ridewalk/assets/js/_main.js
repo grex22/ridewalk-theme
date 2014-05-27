@@ -41,7 +41,7 @@ var Roots = {
   },
   maps: {
     init: function() {
-      
+      alert('f');
       var historicalOverlay;
 
       function initialize() {
