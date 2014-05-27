@@ -39,6 +39,36 @@ var Roots = {
       });
     }
   },
+  maps: {
+    init: function() {
+      
+      var historicalOverlay;
+
+      function initialize() {
+
+        var newark = new google.maps.LatLng(40.740, -74.18);
+        var imageBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(40.712216, -74.22655),
+            new google.maps.LatLng(40.773941, -74.12544));
+
+        var mapOptions = {
+          zoom: 13,
+          center: newark
+        };
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        historicalOverlay = new google.maps.GroundOverlay(
+            'https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+            imageBounds);
+        historicalOverlay.setMap(map);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    }
+  },
   // Home page
   home: {
     init: function() {
