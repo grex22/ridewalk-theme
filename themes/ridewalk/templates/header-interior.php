@@ -35,10 +35,20 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="breadcrumbs">
-              <?php if(function_exists('bcn_display'))
-              {
-                  bcn_display();
-              }?>
+              <?php
+              global $post;
+              if($post->post_type == 'event'){
+                echo "<a href='".get_permalink(114)."'>Events</a>";
+              }elseif(is_single() || is_archive() || is_home() || is_category()){
+                echo "<a href='".get_permalink(274)."'>News</a>";
+              }else{
+
+                if(function_exists('bcn_display')){
+                    bcn_display();
+                }
+                
+              }
+              ?>
           </div>
         </div>
       </div>
