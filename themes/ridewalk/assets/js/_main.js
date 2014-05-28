@@ -39,39 +39,6 @@ var Roots = {
       });
     }
   },
-  maps: {
-    init: function() {
-
-      var historicalOverlay;
-
-      function initialize() {
-
-        var warsaw = new google.maps.LatLng(41.253306, -85.852012);
-        var imageBounds = new google.maps.LatLngBounds(
-        
-            new google.maps.LatLng(41.134355, -86.059604),
-            new google.maps.LatLng(41.386021, -85.652791));
-
-        var mapOptions = {
-          zoom: 13,
-          center: warsaw
-        };
-        
-        $('#map-canvas').css('height',700);
-
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-
-        historicalOverlay = new google.maps.GroundOverlay(
-            'http://ripfishstage.com/ridewalk/wp-content/uploads/2014/05/county.gif',
-            imageBounds);
-        historicalOverlay.setMap(map);
-      }
-
-      google.maps.event.addDomListener(window, 'load', initialize);
-
-    }
-  },
   // Home page
   home: {
     init: function() {
