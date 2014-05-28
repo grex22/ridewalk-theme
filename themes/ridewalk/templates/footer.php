@@ -3,24 +3,17 @@
 
 	<div class="alertbar row">
 		<div class="col-sm-9">
-			<h1>Questions?</h1>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam er?</p>
+			<h1>Want to Help Out?</h1>
+			<p>Are you looking for ways to get involved in improving the quality of life in your community? There are many opportunities to help in the ongoing effort to build a bicycle and pedestrian friendly community!</p>
 		</div>
 		<div class="col-sm-3 right">
-			<a href="#" role="button" class="btn btn-lg btn-primary">Contact Us</a>
+			<a href="<?php echo get_permalink(100); ?>" role="button" class="btn btn-lg btn-primary">Get Involved!</a>
 		</div>
 	</div>
 
     <div class="row">
     	<div class="col-md-12 footer-sitemap">
-	    	<div class="col-five">
-	    		<p>About</p>
-    			<ul>
-    				<li>
-    					<a href="/test-subpage/">Test Subpage</a>
-    				</li>
-				</ul>
-	    	</div>
+	    	
 	    	<div class="col-five">
               <?php
               $segment = "Ride";
@@ -68,6 +61,17 @@
                 )
               );
               ?>
+	    	</div>
+        <div class="col-five">
+	    		<p>Social</p>
+    			<ul>
+    				<li>
+    					<a href="https://www.facebook.com/RWWWL">Facebook</a>
+    				</li>
+            <li>
+    					<a href="https://twitter.com/RideWalkWrswWL">Twitter</a>
+    				</li>           
+				</ul>
 	    	</div>
 	    </div>
     </div>

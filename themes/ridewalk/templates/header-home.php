@@ -6,8 +6,8 @@
         <nav class="nav-main" role="navigation">
           <?php
             if ( has_nav_menu('primary_navigation') ) :
-              $twitter_url = '#';
-              $facebook_url = '#';
+              $twitter_url = 'https://twitter.com/RideWalkWrswWL';
+              $facebook_url = 'https://www.facebook.com/RWWWL';
               $socials_html = '<li class="social menu-social">
                                 <div class="icons">
                                   <a href="'.$twitter_url.'">
