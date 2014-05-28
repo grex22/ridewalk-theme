@@ -748,6 +748,17 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    line-height: 1.3em;
 }
 
+table.events-table{
+  margin-bottom:15px;
+  
+  td,th{
+    padding: 10px 0px;
+    border-top:1px solid #666;
+  }
+}
+.em-pagination a{padding:4px;}
+.em-search-wrapper{color:#333;}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
