@@ -87,7 +87,7 @@ header {
 .banner {
    background: url('../img/interior_header.jpg') center center no-repeat;
    .overlay {
-      background: rgba(125, 145, 162, .5 );
+      background: rgba(125, 145, 162, .8 );
       width: 100%;
       min-height: 16em;
       border-bottom: 3px solid #feed01;
@@ -522,6 +522,10 @@ time.published{
    
   ol li, ul li{
     margin-bottom:20px;
+  }
+  
+  img{
+    max-width:100%;
   }
 }
 
