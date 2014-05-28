@@ -359,6 +359,12 @@ a.brand {
    }
 }
 
+time.published{
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
 
 .widget_em_widget{
   margin-bottom:40px;
@@ -643,6 +649,14 @@ a.brand {
 .hentry .byline { }
 .hentry .entry-content { }
 .hentry footer { }
+
+h2.entry-title{
+  margin-bottom:.5em;
+}
+
+article + article{
+  margin-top:45px;
+}
 
 
 
