@@ -49,7 +49,7 @@ var Roots = {
         var warsaw = new google.maps.LatLng(41.253306, -85.852012);
         var imageBounds = new google.maps.LatLngBounds(
         
-            new google.maps.LatLng(41.134355, -86.049766),
+            new google.maps.LatLng(41.134355, -86.059604),
             new google.maps.LatLng(41.386021, -85.652791));
 
         var mapOptions = {
