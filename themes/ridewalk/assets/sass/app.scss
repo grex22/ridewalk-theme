@@ -218,6 +218,7 @@ a.brand {
                   display: block;
                   padding: 5px 10px;
                   font-size: 1.2em;
+                  font-weight: 400;
                   &:hover {
                      background: #9c9c9b;
                      color: white;
@@ -592,6 +593,11 @@ time.published{
       background-color: #ebebeb;
       border-color: #adadad;
    }
+}
+
+.gfield_select{
+  color: black;
+  font-size: 15px;
 }
 
 
