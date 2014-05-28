@@ -88,7 +88,7 @@
 							<p><?php the_excerpt(); ?></p>
 						</div>
 
-						<a href="#" role="button" class="btn btn-default">More News</a>
+						<a href="<?php echo get_permalink(274); ?>" role="button" class="btn btn-default">More News</a>
 						<?php
 
 					endwhile;

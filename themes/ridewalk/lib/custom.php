@@ -14,3 +14,20 @@ function rw_add_image_class($class){
    return $class;
 }
 add_filter('get_image_tag_class','rw_add_image_class');
+
+add_shortcode( 'iframe' , 'mycustom_shortcode_iframe' );
+function mycustom_shortcode_iframe($args, $content) {
+    $keys = array("src", "width", "height", "scrolling", "marginwidth", "marginheight", "frameborder");
+    $arguments = mycustom_extract_shortcode_arguments($args, $keys);
+    return '<iframe ' . $arguments . '></iframe>';
+}
+
+function mycustom_extract_shortcode_arguments($args, $keys) {
+    $result = "";
+    foreach ($keys as $key) {
+        if (isset($args[$key])) {
+            $result .= $key . '="' . $args[$key] . '" ';
+        }
+    }
+    return $result;
+}
