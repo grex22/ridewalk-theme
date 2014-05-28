@@ -57,13 +57,13 @@ var Roots = {
           center: warsaw
         };
         
-        $('#map-canvas').css('height',400);
+        $('#map-canvas').css('height',700);
 
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
         historicalOverlay = new google.maps.GroundOverlay(
-            'http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+            'http://ripfishstage.com/ridewalk/wp-content/uploads/2014/05/county.gif',
             imageBounds);
         historicalOverlay.setMap(map);
       }
