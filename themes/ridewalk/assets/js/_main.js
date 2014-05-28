@@ -49,8 +49,8 @@ var Roots = {
         var warsaw = new google.maps.LatLng(41.253306, -85.852012);
         var imageBounds = new google.maps.LatLngBounds(
         
-            new google.maps.LatLng(41.435793, -86.092338),
-            new google.maps.LatLng(41.047527, -85.650138));
+            new google.maps.LatLng(41.041313, -86.075859),
+            new google.maps.LatLng(41.437852, -85.652885));
 
         var mapOptions = {
           zoom: 13,
@@ -63,7 +63,7 @@ var Roots = {
             mapOptions);
 
         historicalOverlay = new google.maps.GroundOverlay(
-            'https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+            'http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
             imageBounds);
         historicalOverlay.setMap(map);
       }
