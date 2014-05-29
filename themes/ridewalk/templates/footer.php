@@ -57,7 +57,7 @@
                 array(
                   'theme_location'  => 'primary_navigation',
                   'segment'			=> $segment,
-                  'items_wrap'      => '<p>'.$segment.'</p><ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'items_wrap'      => '<p>'.$segment.'</p><ul id="%1$s" class="%2$s">%3$s<li><a href="'.get_permalink(61).'">Advisory Committee</a></li></ul>',
                 )
               );
               ?>
