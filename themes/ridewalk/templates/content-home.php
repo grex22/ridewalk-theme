@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 	  		<div class="col-md-4 left">
-	  			<div class="icon bike"><a href="#">View our area Ride Guide!</a></div>
+	  			<div class="icon bike"><a href="<?php echo get_permalink(321); ?>">View our area Ride Guide!</a></div>
 	  			<h1>Our Community Enjoys:</h1>
 	  		</div>
 	  		<div class="col-md-8 right">

@@ -1,8 +1,8 @@
 
 <div class="cta-widget ride">
-	<a href="#" class="icon bike"></a>
-	<h3><a href="#">Planning a Ride?</a></h3>
-	<p>View our Ride Guide!</p>
+	<a href="<?php echo get_permalink(321); ?>" class="icon bike"></a>
+	<h3><a href="<?php echo get_permalink(321); ?>">Planning a Ride?</a></h3>
+	<p><a href="<?php echo get_permalink(321); ?>">View our Ride Guide!</a></p>
 </div>
 
 <div class="cta-widget trails">
