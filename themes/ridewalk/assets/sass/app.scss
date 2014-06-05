@@ -463,6 +463,8 @@ time.published{
    padding: 4em 0 10em;
    position:relative;
    
+   hr{clear:both;}
+   
    &.reversed{
     background-image:none;
     background-color:white;
@@ -473,7 +475,7 @@ time.published{
     }
     hr{
       border-top: 1px solid #333;
-      clear:both; 
+       
     }
     
     a{
